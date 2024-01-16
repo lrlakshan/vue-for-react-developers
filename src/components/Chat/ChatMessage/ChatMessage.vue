@@ -8,12 +8,12 @@ import EmojiMessage from "./EmojiMessage.vue";
 const props = defineProps({
   message: {
     type: Object,
-    default: {
+    default: () => ({
       type: null,
       userId: null,
       direction: null,
       timestamp: null,
-    },
+    }),
   },
 });
 

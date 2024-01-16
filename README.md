@@ -4,7 +4,7 @@
 
 Hi and welcome! This repository contains a chat application created with the Vue 3 Composition API.
 
-[Workshop slides 24.1.2023](./docs/Introduction%20to%20Declarative%20DOM%20Manipulation.pdf)
+[Workshop slides 16.1.2024](./docs/Introduction%20to%20Declarative%20DOM%20Manipulation%202024.pdf)
 
 [Original workshop slides](https://xd.adobe.com/view/4a2bc58a-b5cf-45b3-ab5d-771d7ec9dd83-1f78/)
 
@@ -25,7 +25,7 @@ Hi and welcome! This repository contains a chat application created with the Vue
 
 Ensure your Node.js version is `>=12.2.0` with `node --version`. If not, it's time to upgrade for which I recommend [nvm](https://github.com/nvm-sh/nvm).
 
-Run these commands in your command line to get this project up and running.
+Run these commands in your command line to get a local development version of this project up and running on your machine.
 
 ```bash
 # Clone the repository
@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-The app should now be running at [localhost:3000](http://localhost:3000])
+The app should now be running at [localhost:5173](http://localhost:5173])
 
 ### IDE Setup
 
@@ -105,7 +105,7 @@ The `Compose.vue` component has a button that should send the typed message, but
 
 With the `Compose` component fixed, the `Chat` component should now be receiving `send` events from it. However, nothing is registered to handle these events.
 
-Create a function that mutates the reactive `messages` variable. It should append new messages to the existing array of messages. Make sure to attach this function to the `Compose` component's `send` event.
+Create a function that mutates the reactive `messages` variable. It should append new messages to the existing array of messages (open `messages.js` to find out what format messages are stored in). Make sure to attach this function to the `Compose` component's `send` event.
 
 You should now have a working, albeit very one-sided, chat app!
 
