@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import Input from "../generic/form/Input.vue";
 import Button from "../generic/form/Button.vue";
+import EmojiSelector from "./ChatMessage/EmojiSelector.vue";
 
 // Store the text input value
 const text = ref("");
@@ -21,14 +22,21 @@ const emit = defineEmits(["send"]);
  * Sends a text message.
  */
 function send() {
-  emit("send", text.value); // Hint: You can provide more parameters to 'emit'.
+  emit("send", text.value, "text"); // Hint: You can provide more parameters to 'emit'.
   text.value = "";
+}
+
+/**
+ * Sends an emoji message.
+ */
+function sendEmoji(name) {
+  emit("send", name, "emoji");
 }
 </script>
 
 <template>
   <div class="compose">
-    <!-- An emoji selector could go here, for example. The choice is yours! -->
+    <EmojiSelector @send="sendEmoji" />
 
     <div class="message-row">
       <Input
