@@ -3,7 +3,7 @@
 import { inject } from "vue";
 import ChatBubble from "./ChatBubble.vue";
 import Timestamp from "../../Timestamp.vue";
-import EmojiMessage from "./EmojiMessage.vue";
+import EmojiMessage from "./emojiMessage.vue";
 
 const props = defineProps({
   message: {

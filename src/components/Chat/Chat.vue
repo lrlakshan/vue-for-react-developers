@@ -20,7 +20,7 @@ const messages = ref(existingMessages);
 function addMessage(content, type) {
   const message = {
     content,
-    type: "text", // Hint: you may want to parameterize this
+    type, // Hint: you may want to parameterize this
     senderId: USER_ID,
     timestamp: new Date(),
   };
